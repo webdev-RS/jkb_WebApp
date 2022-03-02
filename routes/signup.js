@@ -16,7 +16,7 @@ router.post('/', function(req, res){
         if(err){
             res.render('/signup')
         }else {
-            res.redirect('/mainpage')
+            res.redirect('/home')
         }
     })
     

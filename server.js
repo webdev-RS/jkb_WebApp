@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config('./dotenv')
 const bodyparser = require('body-parser')
 
 // importing routes
-const homeRouter = require('./routes/home')
+const homeRouter = require('./routes/index')
 const rgRouter = require('./routes/signup')
 const inRouter = require('./routes/signin')
 const mpRouter = require('./routes/mainpage')
@@ -39,7 +39,7 @@ db.once("open", function () {
 app.use('/', homeRouter)
 app.use('/signup', rgRouter)
 app.use('/signin', inRouter)
-app.use('/mainpage', mpRouter)
+app.use('/home', mpRouter)
 
 
 app.listen(process.env.PORT || 3000);
