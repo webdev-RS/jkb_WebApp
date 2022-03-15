@@ -1,0 +1,24 @@
+<%-  include('nav_partial') %> 
+<div class="songupload">         
+   <form action="/upload" method="post" enctype="multipart/form-data">
+       <br>
+       <label>Music name</label> <br>
+       <input type="text" name="ncsname" value="<%= addfiledata.ncsname %> " placeholder="creater">  
+       <br>
+       <label>creater name/user name</label> <br>
+       <input type="text" name="creater" value="<%= addfiledata.creater %>" placeholder="creater">  
+       <br>
+       <label>Date</label>  <br>
+       <input type="date" name="date" value="<%= addfiledata.date %>" placeholder="date">  
+       <br>
+       <label>Add file</label>  <br>
+       <input type="file" name="ncsfile" value="" >  
+       <br>
+       
+       <button type="submit">upload</button>  
+       <button type="reset">cancel</button>  
+
+    
+
+   </form>
+</div>
