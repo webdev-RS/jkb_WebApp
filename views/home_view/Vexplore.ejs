@@ -1,10 +1,35 @@
 <%-  include('nav_partial') %> 
-<h1>recently uploaded </h1>
+<link href="explore.css" rel="stylesheet">
 
- <audio controls>
-    <source src="Coast.mp3" type="audio/mp3">
- </audio>
- <br>
- <audio controls>
-   <source src="Horizon.mp3" type="audio/mp3">
- </audio>
+
+
+<form action="/explore" method="GET">
+   <% if (data){ %> 
+      <% for (var i = 0; i < data.length; i++) {%>
+      
+         <div>NCSname:  <%= data[i]["MusicName"] %></div>
+         <div>creater:  <%= data[i]["CreaterName"] %></div>
+         <div>Uploaded:  <%= data[i]["UploadDate"] %></div>
+         <div><audio controls src="<%= data[i]["FileLocation"] %>" ></audio></div>
+         <%}%>
+      <% } else { %>
+        
+      <h1>No NCS has been Found!</h1>
+       <% } %>
+   
+   
+</form>
+
+
+
+
+
+    
+   
+      
+
+
+
+
+
+

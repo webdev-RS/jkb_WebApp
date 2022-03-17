@@ -2,3 +2,22 @@
 <link rel="stylesheet" href="csshome.css">
 
 <h3> Recennt uploaded</h3>
+
+
+
+<form action="/home" method="GET">
+    <% if (data){ %> 
+       <% for (var i = 0; i < data.length; i++) {%>
+       
+          <div>NCSname:  <%= data[i]["MusicName"] %></div>
+          <div>creater:  <%= data[i]["CreaterName"] %></div>
+          <div>Uploaded:  <%= data[i]["UploadDate"] %></div>
+          <div><audio controls src="<%= data[i]["FileLocation"] %>" ></audio></div>
+          <%}%>
+       <% } else { %>
+         
+       <h1>No NCS has been Found!</h1>
+        <% } %>
+    
+    
+ </form>

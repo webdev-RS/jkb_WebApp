@@ -1,9 +1,10 @@
 const express = require('express')
+const { appendFile } = require('fs')
 const router = express.Router()
 const multer = require("multer")
 const path = require("path")
 
-const fileData = require('/Users/Admin10/jkb_WebApp/models/ncs_upload')
+const fileData = require('../../models/ncs_upload')
 
 
 
@@ -33,7 +34,7 @@ router.post('/',upload.single('ncsfile'),(req, res)=>{
         MusicName:req.body.ncsname,
         CreaterName:req.body.creater,
         UploadDate:req.body.date,
-        FileLocation:'public/NCS/'+req.body.ncsname+'.mp3'
+        FileLocation:req.body.ncsname+'.mp3'
 
     })
      addfiledata.save((err)=>{
@@ -45,5 +46,4 @@ router.post('/',upload.single('ncsfile'),(req, res)=>{
         }
     })
 })
-
 module.exports = router

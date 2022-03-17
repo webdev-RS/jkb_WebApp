@@ -1,12 +1,18 @@
 const express = require('express')
-const fs = require('fs')
 const router = express.Router()
+const fileData = require('../../models/ncs_upload')
+const sample = require("../../models/sample")
 
 
-router.get('/', function(req, res){
-    res.render('home_view/Vexplore')
-})
-
-
+router.get('/', async (req, res)=>{
+    const smpl =  await fileData.find({}.toArray,function(err, result){
+        if(err){
+            console.log(err)
+        }else{
+            res.render("home_view/Vexplore",{data:result.map(p => p.toJSON())} )
+        }
+    }).clone()
+    
+       })
 
 module.exports = router

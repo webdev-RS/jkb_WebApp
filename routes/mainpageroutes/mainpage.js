@@ -1,10 +1,20 @@
 const express = require('express')
-const fs = require('fs')
+
 const router = express.Router()
 
-router.get('/', (req, res) =>{
-    res.render('home_view/home')
-})
+const fileData = require('../../models/ncs_upload')
+const sample = require("../../models/sample")
 
+
+router.get('/', async (req, res)=>{
+    const smpl =  await fileData.find({}.toArray,function(err, result){
+        if(err){
+            console.log(err)
+        }else{
+            res.render("home_view/home",{data:result.map(p => p.toJSON())} )
+        }
+    }).sort({_id:-1}).limit(1).clone()
+    
+       })
 
 module.exports = router
