@@ -17,7 +17,7 @@ const fileupload = new mongoose.Schema({
     FileLocation:{
         type: String,
         required: true
-       },
+       }
      
                        
 

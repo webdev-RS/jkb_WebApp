@@ -22,6 +22,7 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(express.static('public/NCS'))
+app.use(express.static('public/stylesheets'))
 app.use(bodyparser.urlencoded({limit: '20mb' , extended: false}))
 
 //database connection

@@ -1,25 +1,28 @@
 <%-  include('nav_partial') %> 
 <link href="upload.css" rel="stylesheet">
-<div class="songupload">         
+<div class="form-row">         
    <form action="/upload" method="post" enctype="multipart/form-data">
        <br>
-       <label>Music name</label> <br>
-       <input type="text" name="ncsname" value="<%= addfiledata.ncsname %> " placeholder="creater">  
+       <div class="item">
+        <label>Music Name</label> 
+         <input type="text" name="ncsname" value="<%= addfiledata.ncsname %> " placeholder="NCS Name">  
+       </div>
+       <div class="item">
+        <label>Creater/User Name</label> 
+         <input type="text" name="creater" value="<%= addfiledata.creater %>" placeholder="Creater Name">  
+       </div>
+       <div class="item">
+        <label>Date</label>
+         <input type="date" name="date" value="<%= addfiledata.date %>" placeholder="Date">  
+       </div>
+       <div class="item">
+       <label>Add file</label>
+       <input type="file" name="ncsfile" value="" >
+       </div>  
        <br>
-       <label>creater name/user name</label> <br>
-       <input type="text" name="creater" value="<%= addfiledata.creater %>" placeholder="creater">  
-       <br>
-       <label>Date</label>  <br>
-       <input type="date" name="date" value="<%= addfiledata.date %>" placeholder="date">  
-       <br>
-       <label>Add file</label>  <br>
-       <input type="file" name="ncsfile" value="" >  
-       <br>
-       
-       <button type="submit">upload</button>  
-       <button type="reset">cancel</button>  
-
-    
-
-   </form>
+       <div class="btns">
+       <button type="submit">Upload</button>  
+       <button type="reset">Cancel</button>  
+       </div>
+    </form>
 </div>

@@ -39,7 +39,6 @@ router.post('/',upload.single('ncsfile'),(req, res)=>{
     })
      addfiledata.save((err)=>{
         if(err){
-            res.render('/upload')
             res.send('error while uploading')
         }else {
             res.send('uploaded')

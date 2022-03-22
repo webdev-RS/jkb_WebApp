@@ -1,24 +1,27 @@
+<link href="signupcss.css" rel="stylesheet">
+<div class="main">
 <form action="" method="post">
-     <div class="form-outline form-white">
-    <label  class="form-label" for="formWhite">user name <input type="text" name="username" 
-         placeholder="Enter user name" 
-         value="<%= uname.username %>"
-         required>
-    </label>
-    <label>Email<input type="text" name="email"
-     placeholder="Enter user name" 
-     value="<%= uname.email %>"
-     required>
-</label>
-<label>Password<input type="password" name="pass"
-     placeholder="Enter user name" 
-     value="<%= uname.pass %>"
-     required>
-</label>
-</div>
+     <div class="item">
+    <label>User/Creater Name  </label>
+         <input type="text" name="username"  placeholder="Enter Your Name"  value="<%= uname.username %>"required>
+     </div>
     <br>
-    
-    <a href="/">cancel</a>
-    <button type="submit">login</button>
+    <div class="item">
+    <label>Email</label>
+         <input type="text" name="email" placeholder="Enter Your Email" value="<%= uname.email %>" required>
+     </div>
+    <br>
+    <div class="item">
+    <label>Password</label>
+     <input type="password" name="pass" placeholder="Enter Password" value="<%= uname.pass %>"required>
+     </div>
+    <br>
+    <div class="form-btn">
+      <button class="btn1" type="submit">Login</button>
+      <button class="btn2" role="button">
+           <a href="/">Cancel</a>
+      </button>
+    </div>
+</form>
+</div>
 
-    </form>

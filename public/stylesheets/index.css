@@ -1,0 +1,115 @@
+
+.main-heading{
+ padding: 10px; 
+ margin-right: auto ;
+ margin-left: auto ;
+ display: flex;
+ justify-content: center;
+ flex-grow: 0;
+ flex-shrink: 0;
+
+}
+.title{
+    margin: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 60px;
+    
+}
+
+.container{
+    text-align: center;
+    border: rgb(255, 255, 255) solid 2px;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+    flex-grow: 0;
+    flex-shrink: 0;
+   }
+
+.child-cont h2{
+   color: white;
+}
+
+
+.child-cont img{
+   background-color: darkgray;
+   border:1px solid black;
+   border-radius: 10px;
+}
+
+#img1 {
+    height: 50px;
+    width: 50px;
+}
+#img2 {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+#img3 {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+.foot{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 600px;
+ 
+    
+}
+
+.foot h5{
+    padding: 5px;
+    margin-right: 5px;
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    max-width: 600px;
+    height: 38px;
+    align-items: center; 
+}
+
+.foot button{    
+    margin-top: 3px;
+    margin-left:10px;
+    margin-right:0px;
+    background-image: linear-gradient(92.88deg, #000000 9.16%, #3f3f3f 49.89%, #000000 64.72%);
+    border-radius: 5px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 500;
+    height: 2rem;
+    padding: 0 1.4rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    touch-action: manipulation;
+    
+}
+
+.foot button:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 30px;
+    transition-duration: .1s;
+}
+
+.foot a{
+    color: #FFFFFF;
+}
