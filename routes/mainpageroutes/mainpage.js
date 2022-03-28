@@ -13,7 +13,7 @@ router.get('/', async (req, res)=>{
         }else{
             res.render("home_view/home",{data:result.map(p => p.toJSON())} )
         }
-    }).sort({_id:-1}).limit(1).clone()
+    }).sort({_id:-1}).limit(5).clone()
     
        })
 

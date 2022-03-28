@@ -1,23 +1,32 @@
 <%- include('nav_partial') %> 
 <link rel="stylesheet" href="csshome.css">
 
-<h3> Recennt uploaded</h3>
-
-
-
-<form action="/home" method="GET">
-    <% if (data){ %> 
-       <% for (var i = 0; i < data.length; i++) {%>
-       
-          <div>NCSname:  <%= data[i]["MusicName"] %></div>
-          <div>creater:  <%= data[i]["CreaterName"] %></div>
-          <div>Uploaded:  <%= data[i]["UploadDate"] %></div>
-          <div><audio controls src="<%= data[i]["FileLocation"] %>" ></audio></div>
+<div class="head">
+   <h3> Recent uploaded</h3>
+</div>
+  <div class="mainbox">  
+   <form action="/home" method="GET">
+      <% if (data != null){ %>          
+         <% for (var i = 0; i < data.length; i++) {%> 
+         <div class="player-box">
+            <img  class="img-box" src="cover.jpg" alt="cover">
+            <div class="data-item">
+               <span id="data1">Name-<%= data[i]["MusicName"] %></span>
+               <span id="data2">Creater-<%= data[i]["CreaterName"] %></span>
+               <span id="data3">Uploaded On-<%= data[i]["UploadDate"] %></span>
+            </div>
+                   <div class="audio-ctrl">
+                     <audio id="my-audio" controls>
+                        <source src="<%= data[i]["FileLocation"] %>"></source>
+                     </audio>
+                   </div>
+         </div>
           <%}%>
-       <% } else { %>
-         
-       <h1>No NCS has been Found!</h1>
-        <% } %>
-    
-    
- </form>
+     
+          <% } else { %>
+            <h2 id="mh">NCS Not Available!</h2> 
+         <% } %>
+   </form>
+   </div>
+
+

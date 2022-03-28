@@ -11,7 +11,7 @@ const fileupload = new mongoose.Schema({
         required: true
     },
    UploadDate:{
-        type: Date,
+        type: String,
         required: true
         },
     FileLocation:{

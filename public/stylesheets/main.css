@@ -3,6 +3,7 @@
 @import 'stylesheets/signupcss.css';
 @import 'stylesheets/navbar_css.css';
 @import 'stylesheets/upload.css';
+@import 'stylesheets/explore.css';
 @font-face {
     font-family: 'Gotham Rounded';
     src: url('GothamRounded-Medium.woff2');

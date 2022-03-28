@@ -1,11 +1,79 @@
-@font-face {
-    font-family: 'Gotham Rounded';
-    src: url('GothamRounded-Medium.woff2');
-    font-weight: bold;
-    font-style: normal;
+
+.head h3{
+     margin-top: 20px;
+     margin-left: 30px;
+    
+}
+
+.mainbox {
+    display: flex;
+    flex-direction:column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 450px;
+    max-height: 500px;
+    max-width: 1000px;
+    margin-top: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    max-height: fit-content;
+    min-height: 450px;
+    overflow:scroll;
+
+}
+
+#mh{ 
+   margin-left:auto;
+   margin-right: auto;
+}
+
+.player-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        
+    margin-top: 15px;
+    margin-left: 55px;
+    margin-right: 55px;
+    background-color: rgb(116, 116, 116);
+    border: rgb(0, 0, 0) solid 2px;
+    border-radius: 5px;
+    max-width: 900px; 
+    max-height: 200pxt;
+
+}
+.img-box{
+    height:100px;
+    width: 100px;
+    border: rgb(0, 0, 0) solid 2px;
+    margin: 5px 20px 5px 20px;
+    border-radius: 5px;
+}
+.data-item{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+span ,#data1, #data2, #data3  {
+    padding: 3px;
+    color: rgb(252, 252, 252);
+}
+.audio-ctrl{
+    margin-left: 20px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    align-content: center;
+}
+.audio-ctrl audio{
+   margin-top: 22px;
 }
 
 
-h3{
-    text-align: center;
-}
+

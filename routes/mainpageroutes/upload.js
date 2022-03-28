@@ -39,9 +39,9 @@ router.post('/',upload.single('ncsfile'),(req, res)=>{
     })
      addfiledata.save((err)=>{
         if(err){
-            res.send('error while uploading')
+            res.render('home_view/msg_partials.ejs', {uploadedMsg:"ERROR!! Unable To Upload File"})
         }else {
-            res.send('uploaded')
+            res.render('home_view/msg_partials.ejs', {uploadedMsg:"NCS Music Has Been Uploaded"})
         }
     })
 })

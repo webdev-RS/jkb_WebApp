@@ -1,11 +1,23 @@
 <link href="navbar_css.css" rel="stylesheet">
 
 <nav> 
+    <div class="nav-main">
+    <div class="sunhead">
     <h2>Jukebox-dev</h2>  
+    </div>
+    <div class="ul-items">
     <ul class="menuItem">
         <li><a href="/home" data-item="HOME">HOME</a></li>
         <li><a href="/explore" data-item="EXPLORE" >EXPLORE</a></li>
         <li><a href="/upload" data-item="UPLOAD">UPLOAD</a></li>
     </ul>
+    </div>
+    </div>
+    <div class="outbtn">
+    <form action="/signin?_method=DELETE" method="post">
+        <button type="submit">Logout</button>
+        </div>
+       </form>
+       
     </nav>
-    
+   

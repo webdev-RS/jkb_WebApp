@@ -1,17 +1,24 @@
 <%-  include('nav_partial') %> 
 <link href="explore.css" rel="stylesheet">
 
-
-
+<div class="head">
+   <h3>Available NCS</h3>
+</div>
+<div class="mainbox">  
 <form action="/explore" method="GET">
    <% if (data){ %> 
       <% for (var i = 0; i < data.length; i++) {%>
-      
+         <div class="player-box">
+            <img  class="img-box" src="cover.jpg" alt="cover">
+            <div class="data-item">
          <div>NCSname:  <%= data[i]["MusicName"] %></div>
          <div>creater:  <%= data[i]["CreaterName"] %></div>
          <div>Uploaded:  <%= data[i]["UploadDate"] %></div>
-         <div><audio controls src="<%= data[i]["FileLocation"] %>" ></audio></div>
+         </div>
+         <div class="audio-ctrl"><audio controls src="<%= data[i]["FileLocation"] %>" ></audio></div>
+         </div>
          <%}%>
+
       <% } else { %>
         
       <h1>No NCS has been Found!</h1>
@@ -20,7 +27,7 @@
    
 </form>
 
-
+</div>
 
 
 
